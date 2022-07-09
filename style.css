@@ -1,0 +1,47 @@
+* {
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+background-color:#503F8C;
+font-size: 1.25rem;
+}
+
+
+.containerGrid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main";
+}
+
+.sideBar {
+    grid-area: sidebar;
+    border: 1px red solid;
+    background-color: #503F8C;
+    color:white;
+}
+
+.sideBar .logo{
+
+}
+.logo ~ div{
+    font-size: 1rem;
+}
+.header {
+    grid-area: header;
+    border: 1px red solid;
+}
+.main {
+    grid-area: main;
+    border: 1px red solid;
+}
+
+
+/* Color Theme Swatches in Hex */
+.Evina-1-hex { color: #D94350; }
+.Evina-2-hex { color: #503F8C; }
+.Evina-3-hex { color: #503FBF; }
+.Evina-4-hex { color: #242526; }
+.Evina-5-hex { color: #0D0D0D; }
+
