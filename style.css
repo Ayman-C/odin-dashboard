@@ -21,7 +21,7 @@ margin: 0;
 .sidebar {
     grid-area: sidebar;
     background-color: #2486D6; 
-    padding-left: 1em;
+    padding-left: 1rem;
     color:white;
 }
 
@@ -36,7 +36,7 @@ height:1.2rem;
 width: auto;
 }
 .logoTitle{
- letter-spacing: 0.1em;
+ letter-spacing: 0.1rem;
     
 }
 
@@ -73,7 +73,76 @@ width: auto;
 
 .header {
     grid-area: header;
-    border: 1px red solid;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding:1rem;
+}
+
+.headerTop{
+    display: grid;
+    grid-template-columns: auto 3fr 2fr 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column: span 2;
+    align-items: center;
+    /* gap:0.1rem; */
+}
+.headerTop .searchBar{
+    border:2px solid #2486D6;
+    border-radius: 6px;
+    color:#F5F7FA;
+    height:1rem;
+}
+
+.notificationIcon{
+    justify-self: right;
+}
+.profileIconSmall{
+    height: 2rem;
+    justify-self: center;
+}
+
+.headerBottomLeft{
+    display:grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "picture greetings"
+    "picture userAccount";
+    justify-items: left;
+    column-gap:0.25rem;
+}
+.profileIcon{
+    grid-area: picture;
+    height: 4rem;
+    justify-self: right;
+    align-self: center;
+}
+
+.greetings{
+    grid-area: greetings;
+    font-size: 1rem;
+}
+
+.userAccount{
+    grid-area: userAccount;
+    font-weight: bold;
+}
+
+
+.headerBottomRight{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:3rem;
+    /* justify-content:space-around; */
+}
+.actionButton{
+    background-color: #2486D6;
+    border-radius: 15px;
+    text-align: center;
+    align-self: center;
+    color:#F5F7FA;
+
 }
 .main {
     grid-area: main;
