@@ -11,7 +11,7 @@ margin: 0;
 .containerGrid {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: minmax(200px,0.75fr) 5fr;
     grid-template-rows: 1fr 5fr;
     grid-template-areas: 
     "sidebar header"
@@ -20,9 +20,8 @@ margin: 0;
 
 .sidebar {
     grid-area: sidebar;
-    border: 1px red solid;
     background-color: #2486D6; 
-    padding-left: 1rem;
+    padding-left: 1em;
     color:white;
 }
 
@@ -30,12 +29,15 @@ margin: 0;
     display: grid;
     grid-template-columns: 1fr;
     justify-items:left;
-    padding-left: 2rem;
     padding-top: 1rem;
 }
 .logo{
 height:1.2rem;
 width: auto;
+}
+.logoTitle{
+ letter-spacing: 0.1em;
+    
 }
 
 .sidebarHeader ~ div{
@@ -51,10 +53,15 @@ width: auto;
     "...."
     "sidebarSupport";
     justify-items:left;
-    padding-left: 2rem;
 }
 .sideItem{
     margin-bottom: 0.15rem;
+    display:grid;
+    grid-template-columns: 0.1fr 1fr;
+    gap:0.1em;
+}
+.sideIcon{
+     align-self: center;
 }
 .sidebarMain{
     grid-area: sidebarMain;
@@ -70,16 +77,28 @@ width: auto;
 }
 .main {
     grid-area: main;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
     border: 1px red solid;
 }
 
+.bodySection1{
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+}
+.bodySection2{
+    grid-area: announcements;
+}
+.bodySection3{
+    grid-area: trending;
+}
 
-/* Color Theme Swatches in Hex */
-.Evina-1-hex { color: #D94350; }
-.Evina-2-hex { color: #503F8C; }
-.Evina-3-hex { color: #503FBF; }
-.Evina-4-hex { color: #242526; }
-.Evina-5-hex { color: #0D0D0D; }
 
 /* Color Theme Swatches in Hex */
 .Dashboard-1-hex { color: #2F2B42; }
