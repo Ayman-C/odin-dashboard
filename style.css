@@ -191,7 +191,7 @@ width: auto;
     grid-area: announcements;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.9fr 5fr;
+    grid-template-rows: 0.75fr 5fr;
 }
 
 .announcement{
